@@ -1,0 +1,17 @@
+%style 
+  \#main .shell{width:inherit;}
+
+- content_for :title, "My Lessons"
+.index
+  .content
+    .title
+      %h1
+        = link_to 'New Lesson', new_lesson_path
+    .lessons
+      - @lessons.each do |lesson|
+        .lesson{:class => cycle('even', 'odd')}
+          %a.lesson_link{:href => "/lessons/#{lesson.id}"}= lesson.name
+          .clr
+        .clr
+
+

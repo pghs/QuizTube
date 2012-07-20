@@ -1,0 +1,329 @@
+iframe {
+  background-color: transparent;
+}
+
+.countdown-container {display: block}
+nav.top ul {
+  display: block;
+}
+
+.authentications_container, .form_container {
+    // padding:.62em 1em 0em;
+    float:left;
+}
+
+.authentications_container {
+    margin:33px 0 0 70px;
+    p {
+      clear:both;
+      padding-top:10px;
+    }
+}
+#shadow_box.users_edit, #shadow_box.user_new {
+/*  width:550px;*/
+  
+  .title {
+    h4 {
+      margin:0em !important;
+      padding-left:0em !important;
+    }
+  }
+  
+  input[type=email], input[type=password], input[type=text] {
+    font-size:1em !important;
+    width:16em !important;
+  }
+
+  input[type=submit] {
+    display:block;
+    margin:.62em 0;
+    width:100% !important;
+  }
+  
+  .form_container {
+      input{color: #595448;}
+      .left, .right{margin-bottom: 10px;}
+      .left{float: left;margin-top:8px;}
+      .right{
+        float: right; margin-left:15px;
+        input {
+          margin-top:8px;
+        }
+      }
+      .password {margin:0 0 10px}
+  }
+}
+
+.credit_card{
+  .form_container {
+      input{color: #595448;}
+      .left, .right{margin-bottom: 10px;}
+      .left{float: left;}
+      .right{float: right;}
+      .password input, .password .right, .password .left{}
+      .password {margin:0 0 10px -10px}
+  }
+}
+
+.authentications {
+  margin-bottom: 30px;
+}
+
+.authentication {
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  margin:5px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.authentication .remove {
+  text-decoration: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+
+.authentication .remove:hover {
+  color: #CCC;
+  background-color: #777;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.authentication img {
+  float: left;
+  margin-right: 10px;
+}
+
+.authentication .provider {
+  font-weight: bold;
+}
+
+.authentication .uid {
+  color: #666;
+  font-size: 11px;
+  overflow:hidden;
+}
+
+.auth_provider img {
+  display: block;
+}
+
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+.rounded_border {
+    border: 1px solid lightGrey;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+    -moz-border-radius:5px 5px 5px 5px;
+}
+          
+#main {
+  .shell {
+    #shadow_box.sessions_new {
+      .title {
+        h4 {
+          border-left:2px solid grey;
+        }
+      }
+    }
+  }
+}
+
+.users_edit, .user_new {
+  background-color:red;
+  padding:60px 60px 0px 60px;
+  margin-top:-8px;
+  background:url(sessions/path.png) no-repeat center -32px;
+
+  .login, .signup, .newpassword, .editreg {
+    float:none;
+    // background-color:red;
+    width:420px !important;
+    height:inherit !important;
+    margin: 0 auto;
+
+    .title {
+      .create-account, .login-link {
+        float:right;
+        font-size:15px;
+        font-weight:normal;
+      }
+    }
+
+    .instructions {
+      font-style:italic;
+      font-size:15px;
+      color:#888;
+      margin:20px 20px 0px 20px;
+    }
+
+    .form_container {
+      padding:0;
+      width:100%;
+
+      form {
+        margin:0;
+        padding:0;
+        background:none !important;
+
+        #flash_alert, #flash_error, #flash_notice, #error_explanation {
+          font-size:15px;
+          line-height:20px;
+          color:#FC3048;
+          padding-bottom:5px;
+          font-style:italic;
+
+          h2 {
+            color:#FC3048;
+            display:none;
+          }
+          ul {
+            padding:5px 0;
+            margin:0;
+            line-height:20px;
+            li {
+              color:#FC3048;
+              line-height:20px;
+            }
+          }
+        }
+
+        .inner {
+          padding:20px;
+          
+          a {
+            // padding-top:10px;
+            font-size:12px;
+            line-height:30px;
+          }
+
+          .paren {
+            font-size:12px;
+            line-height:20px;
+            color:#999;
+            font-style:italic;
+          }
+
+          .rule {
+            margin:15px 0;
+            border-top:1px solid #ccc;
+          }
+        }
+
+        label {
+          font-size:14px;
+          line-height:20px;
+        }
+
+        .cl.ten {
+          height:10px;
+        }
+
+        }
+
+    }
+    
+    .fb-like {
+      margin-top: 7px;
+      height:40px;
+      span {
+        height:40px;
+      }
+    }
+  }
+
+  .footer-small {
+    margin-top:40px;
+    font-size:12px;
+    line-height:20px;
+    text-align:center;
+    color:#999;
+
+    a {
+      color:#999;
+      margin: 5px;
+    }
+  }
+
+  .title, .title-bottom {
+    padding:15px 20px;
+    margin:0px;
+    font-size:20px;
+    color:#666;
+  }
+
+  .title-bottom {
+    border-radius: 0px 0px 5px 5px;
+    border-top: 1px solid #DDD;
+    border-bottom: none;
+
+    .button {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 40px;
+      color: #555;
+      margin: 0;
+      // margin-right:20px;
+      padding: 0em 20px;
+      display: inline;
+      border-color: #ECA91A;
+      float:right;
+    }
+
+    .remember, .disclaimer, .cancel {
+      padding:0px !important;
+      line-height:42px;
+      font-size:12px !important;
+      float:left;
+    }
+
+    .disclaimer {
+      line-height:20px;
+    }
+  }
+
+  input[type=email], input[type=password], input[type=text] {
+    // clear:both;
+    display:block;
+
+    width:220px;
+    border: solid #ccc 1px;
+    border-radius: 3px;
+    font-size:16px;
+    padding:2px;
+    margin:0;
+    line-height:20px;
+
+    color:#444;
+    background-color:#edebe4 !important;
+  }
+  input:-webkit-autofill {
+    background-color:#edebe4 !important;
+  }
+
+  input[type=submit] {
+    margin:0;
+    color:#333;
+    display:inline;
+
+    line-height: 61px;
+    font-size: 38px;
+    margin: 19px 0 19px 5px;
+  }
+}

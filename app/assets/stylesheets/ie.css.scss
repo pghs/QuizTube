@@ -1,0 +1,56 @@
+body {
+	.ie {
+		input {
+			position: relative;
+		}
+		.aside {
+			position:relative;
+			left:-6px;
+		}
+		.radio {
+			margin-top:-12px !important;
+		}	
+		.with_timer {
+			position: absolute !important;
+		}
+		.stats {
+			position: absolute !important;	
+		}
+		#progress_chart .signup {
+			position: absolute !important;		
+		}
+		.q-markers img {
+			position: relative;
+			top: -12px;
+		}	
+		#interested {
+			right: -25px !important;  
+			top: -38px !important;    			
+		}
+	}
+	.ie9 {
+		.no_hover {
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf') !important;
+        }
+		#remember_me {
+			position: relative;
+			top: 1px;
+		}        
+	}
+	.ie8 {
+		.get_started { 
+			filter: default !important;
+			&.get_started:hover {
+				filter: default !important;
+			}
+		}
+
+		#remember_me {
+			position: relative;
+			top: 6px;
+		}
+		#explore img {
+			display: none !important;
+		}		
+	}
+}

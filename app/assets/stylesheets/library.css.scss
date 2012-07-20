@@ -1,0 +1,336 @@
+// Place all the styles related to the library controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.egg_store {
+  margin-right:-16px;
+
+  #welcome {
+    text-align:center; 
+
+    color: #444;
+    line-height: 61px;
+    font-size: 38px;
+    background-color: #ffc245;
+    padding:0;
+    margin:0;
+    width:971px;
+    margin-top:15px;
+    margin-bottom:-15px;
+
+    min-height:0;
+    box-shadow:none;
+    float:none;
+  }
+
+  .egg_container-old {
+    width:308px; 
+    float: left; 
+    margin:15px 20px 15px 1px;
+    font-size: 20px;
+    .title {
+      height:1.62em; overflow:hidden;
+      h4 {
+        font-weight: bold;
+      }
+      h2 { 
+        font-size: 20px;
+      }
+    }
+    .image {
+      margin:14px;
+      img{
+        max-width:280px;
+      }
+    }
+    ul {
+      padding:0 0 .32em 0 !important;
+      li {
+        color:#004B91;
+        list-style-type:none;
+        font-size: 12px;
+        padding-left:14px;
+
+        &:hover { 
+          text-decoration:underline; 
+          color:#C60;
+        }
+      }
+    }
+    .egg_image{float:left;}
+    .egg_info{float:left; margin: 30px 0 0 15px; font-size:12px;}
+    .egg_price{color: #b00000; font-weight: bold;}
+    .review{margin-top:10px; margin-left: -10px;}
+  }
+
+  //I dont understand and hate you IE:
+  .egg_link {
+    .lessons {
+      display: none;
+    }
+  }
+
+  .egg_container{ 
+    width:312px; 
+    height: 360px;
+    margin-right:16px;
+    float: left; 
+    color:#606060; 
+    font-size:20px;
+    margin-top:35px;
+
+    .title {
+      font-size:20px;
+      padding:.31em; 
+      background:#D6D6D6;
+      overflow:hidden;
+      opacity:.9;
+      height:28px;
+      position:relative;
+      z-index:2;
+
+      h4 {
+        margin-top:3px;
+        font-size:14px;
+        font-weight:normal; 
+      }
+
+      h2 { 
+        font-weight:normal; 
+        color:#004B91;
+        font-size:23px;
+        line-height:23x;
+      }
+
+      h2:hover { text-decoration:underline; color:#C60;}
+
+    }
+
+    &.placeholder h2:hover { text-decoration:none; color:#004B91; cursor: default;}     
+
+    .image {
+      img {
+        max-width:312px;
+      }
+      position:relative;
+      margin-top:-40px;
+      z-index:0;
+    }
+
+    .egg_image{float:left;}
+    .egg_info{float:left; margin: 30px 0 0 15px;}
+    .egg_price{color: #b00000; font-weight: bold;}
+    .review{margin-top:10px; margin-left: -10px;}
+
+    .lessons {
+      font-size: 16px;
+      box-shadow: 0px 1px 0px 1px #efefef;
+
+      div {
+        font-size: 15px;
+        padding: .31em .62em;
+        height:25px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        color:#004B91;
+        cursor:hand;
+
+        .coming_soon {
+          line-height: 6px;
+          color: #666666;
+          font-style: italic;
+          text-align: center;
+          cursor: default;      
+        }
+
+        &.odd {
+          background:#F4F4F4;
+          &:hover {
+            text-decoration:underline;
+            color:#C60;
+          }          
+        }
+
+        &.even {
+          &:hover {
+            text-decoration:underline;
+            color:#C60;
+          }          
+        }  
+
+        &.more {
+          // font-weight:bold;
+          background:#e4e4e4;
+          a {
+            color:#444 !important;
+          }
+        }
+
+        a {
+          text-overflow:ellipsis;
+        }
+      }
+    }
+  }
+
+  #search_results{width:100%;
+    a{text-decoration: none; color: #606060;}
+    a:hover{text-decoration: none; color: #606060;}
+  }
+
+  #search-box{
+      -webkit-appearance: none;
+      -webkit-font-smoothing: antialiased;
+      border: none;
+      font-size: 18px;
+      padding:4px;
+      width: 292px;
+      font-weight: bold;
+      position: relative;
+      margin-left: 10px;
+      z-index: 10;
+      border: #a0a0a0 1px solid;
+      color:#222;
+  }
+
+  input[type="search"]:-webkit-search-decoration,
+  input[type="search"]:-webkit-search-cancel-button,
+  input[type="search"]:-webkit-search-results-button,
+  input[type="search"]:-webkit-search-results-decoration {
+    display: none;
+  }
+
+  &.newuser {
+    position: relative;
+    margin-top: 10%;
+    float: left;
+
+    .egg_container {
+      height:200px;
+    }
+
+    #welcome {
+      position:relative;
+      top:50%;
+    }
+  }
+}
+
+.egg_details {
+  margin-top:27px;
+  
+  .egg_info {
+     width:62%;
+     float:left; 
+     color:#606060;
+     margin-bottom:1em;
+     
+     h2{font-size: 28px; font-weight: normal; color: #444444; margin-bottom: 17px;}
+     h4{font-size: 17px; font-weight: normal; color: #737373; margin-bottom: .32em;}
+    .egg_image {float:left;}
+    .egg_info {float:left; margin: 0; width:100%; padding-top: 20px;}
+    .egg_price {color: #b00000;}
+    .review {margin-top:10px;}
+    .lesson_list {
+      margin-top: 10px;
+      
+      color: #606060;
+
+      .title {
+        background: #D6D6D6;
+        
+        .header {
+          font-size: 16px;
+          padding:.62em;
+          color:#444; 
+          display: block;
+        }
+      }
+      
+      .lesson_action {
+        a {
+
+          font-size: 16px; 
+          padding:.31em .62em;
+          margin:.31em .31em .31em 0;
+          
+          
+          -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+          -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+          box-shadow:inset 0px 1px 0px 0px #ffffff;
+          background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bde6ff), color-stop(1, #5cb8ed) );
+          background:-moz-linear-gradient( center top, #bde6ff 5%, #5cb8ed 100% );
+          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bde6ff', endColorstr='#5cb8ed');
+          background-color:#bde6ff;
+          -moz-border-radius:6px;
+          -webkit-border-radius:6px;
+          border-radius:6px;
+          border:1px solid #7fc0e3;
+          display:inline-block;
+          color:#005387;
+          text-decoration:none;
+          text-shadow:1px 1px 0px #d6f0ff;
+          
+          &:hover {
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb8ed), color-stop(1, #bde6ff) );
+            background:-moz-linear-gradient( center top, #5cb8ed 5%, #bde6ff 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb8ed', endColorstr='#bde6ff');
+            background-color:#5cb8ed;
+            cursor: pointer;
+          }
+          &:active {
+            position:relative;
+            top:1px;
+          }
+        }
+        &:hover {
+            cursor: pointer;
+          }
+      }
+      
+      .get_all_lessons {text-align:right; display: block; float:right;}
+      .table_header {font-size: 12px; font-weight: bold; color:#cf7006; padding:3px 0}
+    }
+    
+    table {
+      width:100%; 
+      font-size: 16px; 
+      color:#606060;
+      border-width: 0px; 
+      border-color: #fff; 
+      border-spacing: 0px;
+    
+      tr, td {
+        border-width: 0px; 
+        border-color: #fff; 
+        border-spacing: 0px; 
+        text-align: center; 
+        font-size: 16px; 
+        padding:.31em;
+      }
+      tr.d0 td { 
+        background-color: #fff;
+      }
+      tr.d1 td {
+        background-color: #f4f4f4;
+      }
+      #title{
+        width:200px; 
+        color:#808080; 
+        font-size: 10px; 
+        font-weight: normal; 
+        text-align: left; 
+        padding-left: 10px;
+      }
+      #questions{width:100px; color:#808080; font-size: 10px; font-weight: normal; }
+      #price{width:50px; color:#808080; font-size: 10px; font-weight: normal; }
+      #buy{width:105px; color:#808080; font-size: 10px; font-weight: normal; }
+      tr td.title_col{text-align: left; padding-left: 10px;}
+    }
+  }
+  
+  .aside {
+    margin-top:64px;
+  }
+}
+
