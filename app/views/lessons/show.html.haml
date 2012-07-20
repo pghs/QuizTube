@@ -1,5 +1,8 @@
+/ # = hidden_field_tag :media_url, @lesson.media_url
 = hidden_field_tag :media_url, '4qlYGX0H6Ec'
+= hidden_field_tag :lesson_id, @lesson.id
 = hidden_field_tag :questions, []
+
 #create_quiz
 	#media
 		#video_container
@@ -36,30 +39,4 @@
 						= image_tag("incorrect.png", :class => "indicator_mark correct")
 					.answer_space
 						= text_field nil, nil, :id => "answer_input_4", :placeholder => "Answer", :class => "answer_field", :number => 3			
-			%a#finish Save and Continue    		
-
-/ #question_container{:style => "display:none"}
-/ 	#question
-/ 		= text_area nil, nil, :placeholder => "Question", :class => "question_input"
-/ 	#answers
-/ 		.answer
-/ 			.indicator
-/ 				= image_tag("correct.png", :class => "indicator_mark correct")
-/ 			.answer_space
-/ 				= text_field nil, nil, :placeholder => "Answer", :class => "answer_field"   
-/ 		.answer
-/ 			.indicator
-/ 				= image_tag("incorrect.png", :class => "indicator_mark correct")
-/ 			.answer_space
-/ 				= text_field nil, nil, :placeholder => "Answer", :class => "answer_field"  
-/ 		.answer
-/ 			.indicator
-/ 				= image_tag("incorrect.png", :class => "indicator_mark correct")
-/ 			.answer_space
-/ 				= text_field nil, nil, :placeholder => "Answer", :class => "answer_field"  
-/ 		.answer
-/ 			.indicator
-/ 				= image_tag("incorrect.png", :class => "indicator_mark correct")
-/ 			.answer_space
-/ 				= text_field nil, nil, :placeholder => "Answer", :class => "answer_field"  
-/ 	%a#finish Save and Continue    
+			%a#finish Save and Continue    		 
