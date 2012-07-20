@@ -18,22 +18,22 @@
 					.indicator
 						= image_tag("correct.png", :class => "indicator_mark correct")
 					.answer_space
-						= text_field nil, nil, :id => "answer_input_1", :placeholder => "Answer", :class => "answer_field"   
+						= text_field nil, nil, :id => "answer_input_1", :placeholder => "Answer", :class => "answer_field", :number => 0   
 				.answer#answer_2{:style => "display:none"}
 					.indicator
 						= image_tag("incorrect.png", :class => "indicator_mark correct")
 					.answer_space
-						= text_field nil, nil, :id => "answer_input_2", :placeholder => "Answer", :class => "answer_field"  
+						= text_field nil, nil, :id => "answer_input_2", :placeholder => "Answer", :class => "answer_field", :number => 1 
 				.answer#answer_3{:style => "display:none"}
 					.indicator
 						= image_tag("incorrect.png", :class => "indicator_mark correct")
 					.answer_space
-						= text_field nil, nil, :id => "answer_input_3", :placeholder => "Answer", :class => "answer_field"  
+						= text_field nil, nil, :id => "answer_input_3", :placeholder => "Answer", :class => "answer_field", :number => 2
 				.answer#answer_4{:style => "display:none"}
 					.indicator
 						= image_tag("incorrect.png", :class => "indicator_mark correct")
 					.answer_space
-						= text_field nil, nil, :id => "answer_input_4", :placeholder => "Answer", :class => "answer_field"  			
+						= text_field nil, nil, :id => "answer_input_4", :placeholder => "Answer", :class => "answer_field", :number => 3			
 			%a#finish Save and Continue    		
 
 / #question_container{:style => "display:none"}
