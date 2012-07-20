@@ -1,0 +1,444 @@
+.rounded {
+  -moz-border-radius: .31em;
+  -webkit-border-radius: .31em;
+  border-radius: .31em;   
+}
+
+.rounded_top {
+  -moz-border-radius:.31em .31em 0px 0px;
+  -webkit-border-radius:.31em .31em 0px 0px;
+  border-radius:.31em .31em 0px 0px;
+  border-bottom: 1px solid #EEE;  
+}
+
+.rounded_left {
+  -moz-border-radius:.31em 0px 0px .31em;
+  -webkit-border-radius:.31em 0px 0px .31em;
+  border-radius:.31em 0px 0px .31em; 
+  border-right: 1px solid #EEE;     
+}
+
+.shadow {
+  box-shadow: 0 1px .62em #AAA;
+  -moz-box-shadow: 0 1px .62em #AAA;
+  -khtml-box-shadow: 0 1px .62em #AAA;
+  -webkit-box-shadow: 0 1px .62em #AAA;
+  -o-box-shadow: 0 1px .62em #AAA;
+
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#dcdcdc, Strength=4, Direction=0),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#dcdcdc, Strength=4, Direction=90),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#dcdcdc, Strength=4, Direction=180),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#dcdcdc, Strength=4, Direction=270);
+}
+
+#selection_panel {
+  height: 35px;
+  margin: 15px 0px 25px 0px;
+  color: #444;
+  background: #D6D6D6;
+  font-size: 16px;
+  padding: .62em;
+
+  .selection_panel_text {
+    line-height: 35px;
+    display: inline;
+    margin: 0px 0px 0px 25px;
+  }
+
+  #group_title {
+    font-size: large;
+    position: relative;
+    margin: 0px 0px 0px 10px;
+    width: 365px;
+    text-overflow: ellipsis;
+  }   
+
+  #chapter_name {
+    font-size: large;
+    position: relative;
+    margin: 0px 0px 0px 10px;
+    width: 365px;
+    text-overflow: ellipsis;
+  }  
+}
+
+
+
+
+
+
+#class_highlights {
+  height: 120px;
+  margin: 15px 0 15px; 
+  
+  .class_score {
+    width: 136px;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 64px; 
+    line-height: 113px !important; 
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+    box-shadow: 0 1px 9px #AAA;
+    -moz-box-shadow: 0 1px 9px #AAA;
+    -khtml-box-shadow: 0 1px 9px #AAA;
+    -webkit-box-shadow: 0 1px 9px #AAA;
+    -o-box-shadow: 0 1px 9px #AAA;
+
+    .score {
+      height: 90px;
+      text-align: center;
+      line-height: 90px;
+
+      p {
+        padding: 0px !important;
+      }
+
+      .strength_score {
+        height: inherit;
+        color: #005710;
+      }
+
+      .weakness_score {
+        height: inherit;
+        color: #BA0000;
+      }
+
+    }
+
+  }
+
+  #class_strengths {
+    width: 50%;
+    height: inherit;
+    float: left;
+
+    #class_strength_1 {
+      background-color: #fff;
+      height: inherit;
+      float: left;
+      margin-right: 21px;
+      display: inline;    
+    }
+    
+    #class_strength_2 {
+      background-color: #fff;
+      height: inherit;
+      float: left;
+      margin-right: 21px;
+      display: inline;
+    }
+
+    #class_strength_3 {
+      background-color: #fff;
+      height: inherit;
+      float: left;
+      margin: 0px;
+      display: inline;  
+    }
+  } 
+
+  #class_weaknesses {
+    width: 50%;
+    height: 100%;
+    float: right; 
+    
+    #class_weakness_1 {
+      background-color: #fff;
+      height: inherit;
+      float: right;
+      margin-left: 21px;
+      display: inline;       
+    }
+    
+    #class_weakness_2 {
+      background-color: #fff;
+      height: inherit;
+      float: right;
+      margin-left: 21px;
+      display: inline;        
+    }
+
+    #class_weakness_3 {
+      background-color: #fff;
+      height: inherit;
+      float: right;
+      margin: 0px;
+      display: inline;      
+    }
+  }
+}
+
+
+#class_data {
+  height: 250px;
+  margin: 15px auto 15px auto;   
+
+  #class_statistics {
+    background-color: #fff; 
+    height: inherit;
+    float: left;
+    position: relative;
+
+    &>div {
+      width: 320px;
+      margin:18px 0;
+    }
+
+    .class_score {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 64px; 
+      height: inherit;
+      text-align: center;
+      line-height: 120px;
+      -moz-border-radius: 7px;
+      -webkit-border-radius: 7px;
+      border-radius: 7px; 
+      box-shadow: 0 1px 9px #AAA;
+      -moz-box-shadow: 0 1px 9px #AAA;
+      -khtml-box-shadow: 0 1px 9px #AAA;
+      -webkit-box-shadow: 0 1px 9px #AAA;
+      -o-box-shadow: 0 1px 9px #AAA;
+
+      .score {
+        height: inherit;
+        text-align: center;
+        line-height: 120px;
+
+        p {
+          padding: 0px !important;
+
+          .aggregate {
+            color: blue;
+          }
+        }
+      }
+    }
+
+    #class_engagement {
+      // position: absolute;
+      top: 0px;
+      height: 115px;
+      background-color: #fff;      
+      margin-top:3px;
+    }  
+
+    #class_average {
+      // position: absolute;
+      bottom: 0px;
+      height: 115px;
+      background-color: #fff; 
+    }
+  }
+
+  #graph_container {
+    width: 632px;
+    height: inherit; 
+    float: right; 
+    margin-top:3px;   
+
+    #graph_loading div{
+      position:relative;
+      top: 5px;
+      width: 165px;
+      margin: auto;
+      text-align: left;
+      padding-left: 25px;
+      background: url('loading.gif') no-repeat;
+      background-position: 3px;
+      font-size: 16px;
+      line-height: 1em;
+    }
+  }
+
+  #graph_label {
+    display: block;
+    margin: auto;
+  }
+
+  #graph {
+    width: 632px;
+    height: inherit; 
+    float: right;
+  }
+}
+
+#student_data {
+  width: 100%;
+  height: 200px;
+  background-color: #fff; 
+  margin: 25px auto 15px auto;  
+
+  .score {
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 64px; 
+    line-height: 113px !important; 
+  }
+
+  #student_detail_title {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  #student_average {
+    width: 25%;
+    height: 170px;
+    border-right-style: dashed;
+    border-right-color: #ccc;
+    float: left;
+    display: inline;
+  }
+
+  #student_time {
+    width: 25%;
+    height: 170px;
+    border-right-style: dashed;
+    border-right-color: #ccc;
+    float: left;
+    display: inline;
+  }
+
+  #student_strengths {
+    width: 25%;
+    height: 170px;
+    border-right-style: dashed;
+    border-right-color: #ccc;
+    float: left;
+    display: inline;    
+  }
+  
+  #student_weaknesses {
+    width: 24%;
+    height: 170px;
+    float: left;
+    display: inline;    
+  }
+
+  .student_detail_ul {
+    list-style: none; 
+    margin-left: 30px;
+    padding-top: 10px;
+    line-height: 30px;
+  }
+
+  .topic_title {
+    max-width: 142px;
+    overflow: hidden;
+    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .topic_separator {
+    margin-left: 4px;
+  }
+
+  .student_strength_score {
+    color: #005710;
+    font-weight: bold;
+  }
+
+  .student_weakness_score {
+    color: #BA0000; 
+    font-weight: bold;
+  } 
+
+}
+
+.top_panel_title {
+  text-align: center;
+  background-color: #F8F8F8;
+  height: 30px;
+  line-height: 30px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px; 
+}
+
+.horizontal_panel_title {
+  width: 185px;
+  float: left;
+  height: 100%;
+  background-color: #F8F8F8;
+  text-align: center;
+  font-family: arial;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 115px;   
+}
+
+.horizontal_panel_text {
+  line-height: 117px;
+  padding: auto .62em;  
+}
+
+#top_panel_student_name {
+  text-align: center;
+  background-color: #F8F8F8;
+  height: 30px;
+  line-height: 30px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 18px;   
+}
+
+.horizontal_panel_score {
+  width: 134px;
+  text-align: center;
+  float: right;
+  height: 100%;
+}
+
+
+.placeholder_text {
+  color: #ccc;
+}
+
+#graph_placeholder {
+  // height: 105%;
+  // width: 101%;
+  margin-top: -5px;  
+}
+
+#graph_loading {
+  display: block;
+  margin: auto;
+  padding-top: 112px;
+  // height: 25px;
+}
+
+#detail_loading {
+  display: block;
+  margin: auto;
+  height: 15px;  
+  padding-top: 7px;
+}
+
+#notice {
+  height: 35px;
+  margin: 15px 0px 25px 0px;
+  color: #444;
+  background: #FFE77A;
+  padding: .62em;
+  text-align: center;
+  
+  &>p {
+    font-size: 20px;
+    line-height: 35px;
+    padding: 0px !important;
+  }
+}

@@ -1,0 +1,104 @@
+#explore {
+  width:971px;
+  height: 138px;
+  overflow: hidden;
+
+  margin:auto;
+  position:relative;
+
+  .cattails {
+    height:885px;
+    width:885px;
+    position:absolute;
+    top:-470px;
+    left:-442px;
+
+    img {
+      background-image:url(reviewer/animate/cat-tails2.png);
+      height:885px;
+      width:885px;
+      position:absolute;
+    }
+
+    .one { background-position:0 0; }
+    .two { background-position:-885px 0; }
+    .three { background-position:-1770px 0; }
+    .four { background-position:-2655px 0; }
+    .five { background-position:-3540px 0; }
+    .six { background-position:-4425px 0; }
+    .seven { background-position:-5310px 0; }
+  }
+
+  .birdonleaf { 
+    height:202px;
+    width:361px;
+    position:absolute;
+    top:-80px;
+    left:0px;
+
+    img {
+      background-image:url(reviewer/animate/bird-on-leaf2.png);
+      height:202px;
+      width:361px;
+      display:none;
+      position:absolute;
+    }
+
+    .base {
+      background-position:0 0;
+      display:block;
+      /*display:block !important;*/
+    }
+    .egg {
+      background-position:0 -202px;
+      display:block;
+    }
+    .one { background-position:0 -402px; }
+    .two { background-position:0 -603px; }
+    .three { background-position:0 -804px; }
+    .four { background-position:0 -1005px; }
+    .five { background-position:0 -1207px; }
+    .six { background-position:0 -1408px; }
+    .seven { background-position:0 -1609px; }
+    .eight { background-position:0 -1810px; }
+    .nine { background-position:0 -2011px; }
+  }
+
+  .forestfarm { 
+    height:81px;
+    width:385px;
+    position:absolute;
+    top:0px;
+    left:10px;
+
+    img {
+      background-image:url(reviewer/animate/forest-farm.png);
+      height:82px;
+      width:385px;
+      // display:none;
+      position:absolute;
+      top:-81px;
+    }
+
+    .base {
+      background-position:0 0;
+      display:block;
+      /*display:block !important;*/
+      top:0;
+    }
+    .egg {
+      background-position:0 -82px;
+      display:block;
+      top:0;
+    }
+    .one { background-position:0 -165px; }
+    .two { background-position:0 -245px; }
+    .three { background-position:0 -327px; }
+    .four { background-position:0 -409px; }
+    .five { background-position:0 -491px; }
+    .six { background-position:0 -573px; }
+    .seven { background-position:0 -655px; }
+    .eight { background-position:0 -735px; }
+    // .nine { background-position:0 -2011px; }
+  }
+}

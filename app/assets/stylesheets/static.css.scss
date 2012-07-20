@@ -1,7 +1,3 @@
-// Place all the styles related to the Static controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 // Place all the styles related to the studyeggs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -495,121 +491,10 @@
   }
 }
 
-.cta {
-  form {
-    position: relative;
-    top: -5px;
-  }
-  
-  .pricing {
-    color: #0282c9;
-    font-weight: bold;
-    position: relative;
-    right: -45px;
-    top: 30px;
-    display: inline;
-    font-size: 32px;
-  }
+form {
+	margin-top: 50px;
+
+	.field {
+		margin-top: 20px;
+	}
 }
-
-#worksheets {
-  #how_arrow {
-    position: relative;
-    img {
-      position: absolute;
-      top: 190px;
-      left: 117px;
-    }    
-  }  
-
-  .pricing {
-    color: #0282c9;
-    font-weight: bold;
-    position: relative;
-    right: -17px;
-    top: 30px;
-    display: inline;
-    font-size: 24px;
-  }  
-}
-
-#ebooks {
-  #how_arrow {
-    position: relative;
-    img {
-      position: absolute;
-      top: 190px;
-      left: 117px;
-    }    
-  }
-
-  .pricing {
-    right: -74px;
-  }
-}
-
-#quiz {
-  .notext {
-    background: url('landing/quizzes/quiz_logo.png') !important;
-    height:84px;
-  }
-
-  #try_arrow {
-    position: relative;
-    img {
-      position: absolute;
-      top: 230px;
-      left: 112px;
-    }
-  }
-
-  #how_arrow {
-    position: relative;
-    img {
-      position: absolute;
-      top: -38px;
-      left: 112px;
-    }
-  }
-
-  #below_fold_container {
-    border-top: 1px solid #CCC;    
-    background-image:url(thatch.png);
-    padding-bottom: 26px;
-    margin-bottom: -20px;    
-
-    #below_fold {
-      background: white !important;
-      margin: -30px auto 0px;
-      padding-bottom: 1px;
-      box-shadow: 0 1px .62em #AAA;
-      -moz-box-shadow: 0 1px .62em #AAA;
-      -khtml-box-shadow: 0 1px .62em #AAA;
-      -webkit-box-shadow: 0 1px .62em #AAA;
-      -o-box-shadow: 0 1px .62em #AAA;      
-    }
-  }
-
-  #scene {
-    img {
-      top:-35px !important;
-      right:-96px !important;
-    }
-  }
-
-  #demo {
-    border-top: 1px solid #CCC;    
-    height: 575px;
-    width: 100%;
-    background: white !important;
-
-    iframe {
-      margin-top: 50px;
-      border: 0;
-      width: 100%;
-      height: 500px;
-    }
-  }  
-}
-
-

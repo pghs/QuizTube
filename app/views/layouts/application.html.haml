@@ -1,0 +1,23 @@
+%html
+    %head
+        %title= "QuizTube"
+        = stylesheet_link_tag 'application'
+        = javascript_include_tag 'application'
+        =# javascript_include_tag "https://js.stripe.com/v1/"
+        = csrf_meta_tag
+        %link{:rel=>"shortcut icon", :href=>"/assets/favicon.ico"}
+        %meta{:name=>"viewport", :content=>"width=1024"}
+
+    %body
+        /[if IE 9] <div class="ie ie9">
+        /[if IE 8] <div class="ie ie8">
+        /[if IE 7] <div class="ie ie7">
+        
+        = render "layouts/header"
+        .cl
+        #main
+            .shell
+                #content{:class=>"whitebg"}
+                    = yield
+        .cl
+        = render 'layouts/footer'
