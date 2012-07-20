@@ -42,6 +42,7 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.xml
   def create
+    puts params.to_json
     @question = Question.new(params[:question])
     # @question.user_id = current_user.id
     render :json => @question.id if @question.save

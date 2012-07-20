@@ -1,6 +1,7 @@
 class Quiz
 	id: null
 	questions: []
+	video: null
 	current_question: null
 	constructor: ->
 		@id = $("#lesson_id").val()
@@ -8,7 +9,7 @@ class Quiz
 		$("#add_question a").on "click", => @add_question()
 		$("#finish").on "click", => @complete_question()
 		$("#question_input, .answer_field").on "keydown", (e) => @show_next_input($(e.target).attr "id")
-		$("#question_input").on "change", (e) => if @current_question then @current_question.save($(e.target)) else @questions.push new Question $(e.target)
+		$("#question_input").on "change", (e) => if @current_question then @current_question.save("question":$(e.target).val()) else @questions.push new Question "question":$(e.target).val()
 		$(".answer_field").on "change", (e) => @current_question.save_answer($(e.target))
 	add_question: => 
 		$("#add_question").hide()
@@ -33,18 +34,17 @@ class Question
 	id: null
 	text: null
 	answers: []
-	constructor: (element) ->
+	constructor: (data) ->
 		# console.log "New question"
-		@save(element)
-	save: (element) => 
-		# console.log "Save question"
-		@text = element.val()
+		@save(data)
+	save: (data) => 
+		console.log data
+		question_data = {}
 		window.quiz.current_question = @
+		data["lesson_id"] = window.quiz.id
+		question_data["question"] = data
+		# console.log "Save question"
 		[submit_url, method] = if @id then ["/questions/" + @id, "PUT"] else ["/questions", "POST"]
-		question_data = 
-			"question":
-				question: @text
-				lesson_id: window.quiz.id
 		$.ajax
 			url: submit_url
 			type: method
@@ -149,21 +149,24 @@ class Video
       handle : '.small',
       stop: (event, ui)->
         video.playPreviewClip(ui)
+        setTimeout((-> 
+          if window.quiz.current_question then window.quiz.current_question.save("clip_start_time": @current_start_marker_time, "clip_end_time": @current_end_marker_time) else window.quiz.questions.push new Question "clip_start_time": @current_start_marker_time, "clip_end_time": @current_end_marker_time),
+          1000)
       });
 
   playPreviewClip: (ui)->
     marker = ui.helper[0].children[0].children[0].id
-    console.log marker
+    # console.log marker
     percent_offset = parseFloat(ui.position.left / $('#progress_bar').width())
     pos = $(ui.helper[0].parentElement).attr('style')
     sub = pos.substr(pos.indexOf(":") + 1, 6)
     ratio = (parseFloat(sub) / 100)
     sec = (ratio + percent_offset) * @ytPlayer.duration
     if marker == 'start_marker'
-      console.log marker
+      # console.log marker
       @current_start_marker_time = sec
     else
-      console.log marker
+      # console.log marker
       @current_end_marker_time = sec
     @ytPlayer.playVideo()
     @ytPlayer.seekTo(sec - 2)
