@@ -1,0 +1,160 @@
+#media {
+    z-index:1;
+    width:710px;
+    height:399px; //355
+    //float:right;
+    position:relative;
+
+    #video_container {
+      height:399px;
+      #video {
+        height:399px;//315
+        background-color:#f9f9f9;
+      }
+
+      #video_control{
+        position:absolute;
+        width:120px;
+        height:120px;
+        cursor:pointer;
+        top:50%;
+        left:50%;
+        margin:-80px 0 0 -60px;
+
+        display:none;
+      }
+    }
+
+
+    #video_control.play{
+      background:url('reviewer/play.png') no-repeat center center;
+    }
+
+    #video_control.replay{
+      background:url('reviewer/replay.png') no-repeat center center;
+    }
+
+    #video_control.pause{
+      background:url('reviewer/pause.png') no-repeat -99999px;
+    }
+
+    #video_container:hover #video_control.pause{
+      background-position:center center;
+    }
+
+    #video_container.playing:hover .progressBar{
+      display:block;
+    }
+
+    #progress_bar_container {
+      height:30px;
+
+      #progress_bar {
+          width:708px; //558 for small player
+          height:10px;
+          border:1px solid #888;
+          // border-color:#47A6D8;
+          background-color:#fdfdfd;
+          overflow:visible !important;
+
+
+        .elapsed {
+            height:10px;
+            width:0%;
+            background-color:#218dd2;//#bbb;//#218dd2;//#47A6D8; //a9d9ed
+            overflow:visible !important;
+          
+        }
+
+        #q-markers {
+          position:absolute;
+          width:708px;//558 for small player
+          overflow:visible !important;
+
+          .q-marker-spacer {
+            position:absolute;
+            left:-1px;
+
+            .q-marker {
+              height:20px;
+              width:1px;
+              // border-right:1px solid #0066b2;
+
+              .q {
+                img.small{
+                  height:14px;
+                  width:14px;
+                  background-image:url(reviewer/q-sprites-small3.png);
+                  position:relative;
+                  top:18px;
+                  left:-7px;
+                  cursor: pointer;
+                }
+                img.large {
+                  height:28px;
+                  width:29px;
+                  background-image:url(reviewer/q-sprites-large2.png);
+                  position:relative;
+                  top:15px;
+                  left:-14px;
+                  z-index:1;
+                }  
+              }
+
+              &.q-marker.unanswered{
+                background-color:#999;
+                border-left:1px solid #bbb;
+                .q {
+                  img.small{
+                    background-position:-42px 0px;
+                  }
+                  img.large{
+                    background-position:-87px 0px;
+                  }
+                }
+              }
+
+              &.q-marker.wrong{
+                background-color:#e94325;//#218dd2;//#666;
+                border-left:1px solid #f29286;
+                .q {
+                  img.small{
+                    background-position:-28px 0px;
+                  }
+                  img.large{
+                    background-position:-58px 0px;
+                  }
+                }
+              }
+
+              &.q-marker.first-correct{
+                background-color:#0066b2;//#218dd2;//#666;
+                border-left:1px solid #65b6de;
+                .q {
+                  img.small{
+                    background-position:-14px 0px ;
+                  }
+                  img.large{
+                    background-position:-29px 0px;
+                  }
+                }
+              }
+
+              &.q-marker.multi-correct{
+                background-color:#0066b2;//#218dd2;//#666;
+                border-left:1px solid #65b6de;
+                .q {
+                  img.small{
+                    background-position:0px 0px;
+                  }
+                  img.large{
+                    background-position:0px 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

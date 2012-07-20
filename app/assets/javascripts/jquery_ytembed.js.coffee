@@ -1,6 +1,6 @@
 class ytEmbed
   video: null
-  width: 640
+  width: 710
   progressBar: true
   atts:
     id: "ytPlayer"
@@ -90,8 +90,8 @@ class ytEmbed
 
   setProgressBarEvents: ->
     @elements.progress.click (e) =>
-      window.clearInterval reviewer.current_timer
-      reviewer.teaching = false
+      #window.clearInterval reviewer.current_timer
+      #reviewer.teaching = false
       if e.target.className is "large" or e.target.className is "small"
         @questionDotClickEvent(e)
       else
@@ -109,12 +109,13 @@ class ytEmbed
 
     ##set dot click event actions
     if e.target.className is "small"
-      question_id = parseInt($(e.target).attr("id"))
-      reviewer.questions[reviewer.active_question_index].timer.pause()
-      reviewer.active_question_index = question_id
-      reviewer.loadQuestion()
-      reviewer.next_question_time = reviewer.questions[reviewer.active_question_index].clip_end_time
-      reviewer.onBeforeAsk()
+      console.log 'line 112'
+      #question_id = parseInt($(e.target).attr("id"))
+      #reviewer.questions[reviewer.active_question_index].timer.pause()
+      #reviewer.active_question_index = question_id
+      #reviewer.loadQuestion()
+      #reviewer.next_question_time = reviewer.questions[reviewer.active_question_index].clip_end_time
+      #reviewer.onBeforeAsk()
     false
 
   progressBarClickEvent: (e)->
@@ -139,13 +140,13 @@ class ytEmbed
 
     ##set next question based on which index was found to be next
     if i >= q_widths.length
-      reviewer.next_question_time = @duration + 1
+      #reviewer.next_question_time = @duration + 1
     else
-      reviewer.next_question_time = reviewer.questions[i].clip_end_time
-      reviewer.active_question_index = i
-      reviewer.loadQuestion()
+      #reviewer.next_question_time = reviewer.questions[i].clip_end_time
+      #reviewer.active_question_index = i
+      #reviewer.loadQuestion()
 
-    reviewer.hideQuestioner()
+    #reviewer.hideQuestioner()
     false
 
   ##Interval for updating progress bar and checking for next question
@@ -154,7 +155,7 @@ class ytEmbed
       window.clearInterval window.interval
       window.interval = window.setInterval(=>
         @elements.elapsed.width ((@elements.player.getCurrentTime() / @duration) * 100) + "%"
-        reviewer.checkForNextQuestion()
+        #reviewer.checkForNextQuestion()
       , 250)
     else
       window.clearInterval window.interval
@@ -168,7 +169,7 @@ class ytEmbed
       @elements.player.getCurrentTime()
 
   pauseVideo: ->
-    reviewer.teaching = false
+    #reviewer.teaching = false
     if @elements.player && @elements.player.pauseVideo
       @elements.player.pauseVideo()
 
@@ -191,7 +192,7 @@ $ ->
     ##sets the starting position of the bar and starttime of the video if it's a preloaded question
     if window.question_marker_id>=0
       pos = $(".q ##{window.question_marker_id}").parent().parent().parent().attr("style")
-      reviewer.onBeforeAsk()
+      #reviewer.onBeforeAsk()
       sub = pos.substr(pos.indexOf(":") + 1, 6)
       ratio = (parseFloat(sub) / 100)
       window.ytEmbed.elements.elapsed.width ratio * 100 + "%"
@@ -215,7 +216,7 @@ $ ->
 
       playerVars:
         start: startTime
-        controls: 1
+        controls: 0
         showinfo: 0
         fs: 1
         rel: 0
@@ -227,7 +228,7 @@ $ ->
       switch state.data
         when 1
           window.ytEmbed.updateProgressBarWidth true
-          reviewer.playToNextQuestion()  if reviewer.asking_question and not reviewer.teaching
+          #reviewer.playToNextQuestion()  if reviewer.asking_question and not reviewer.teaching
         when 2
           window.ytEmbed.updateProgressBarWidth false
         else
