@@ -129,7 +129,7 @@ $ ->
     newContentsY = difference;
     contents.css('minHeight', newContentsY+'px')
 
-  if $('.video_test').length > 0
+  if $('#create_quiz').length > 0
     ##Load back end variables
     window.questions = $.parseJSON($("#questions").attr("value"))
     window.media_url = $("#media_url").attr("value")
