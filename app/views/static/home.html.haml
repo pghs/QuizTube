@@ -1,0 +1,83 @@
+- content_for :title, "Flipped Video Lessons for Continuous Assessment"
+%style
+  body {
+  background: url(thatch.png) !important;
+  }
+
+  \#footer .shell {
+  width:940px;
+  }
+ 
+  \#footer {
+  background:url('/assets/home/bg5.png') !important;
+  }
+
+
+.teach#quiz
+  / #header
+  /   .shell
+  /     #head
+  /       .row-top
+  /         %h2#logo
+  /           %a.notext{:href=>"/quizzes"} Logo
+  / # = render "layouts/header"
+  #above_fold_container{:class => ("ie" if request.env['HTTP_USER_AGENT'] =~ /MSIE/)}
+    #try_arrow
+      = image_tag('landing/worksheets/try_it_arrow.png')
+    #above_fold
+      #splash
+        .message
+          %h1.large
+            Effective video learning.
+          %h2.small
+            Are you still waiting to see the true value in educational video? 
+            %br
+            Embedding activities within your videos is a great way to turn this
+            %br
+            passive resource into an active, engaging one. Use our simple tools 
+            %br
+            to create video-based assessments from any existing video. When 
+            %br
+            you're done, distribute them to learners and automatically gather 
+            %br
+            feedback and scores.
+        .cta
+          / %p.pricing
+          /   Try it out for free!
+          = form_for(User.new, :as => :user, :url => session_path(:user)) do |f|
+            = f.email_field :email, :placeholder => 'email address'
+            %button.button.yellow#interested{:name => 'sign_up_email', :type => 'submit', :list_id => '346c786cf2'} Get started
+        #scene 
+          =image_tag "static/teach/scene.png"
+  #demo
+    %iframe{:src => "http://www.studyegg.com/review/213/embed"}
+    #how_arrow
+      = image_tag('landing/worksheets/how_arrow.png')
+  .clr
+  #below_fold_container
+    #below_fold 
+      #rows
+        .row.first
+          .img= image_tag "landing/quizzes/youtube.png"
+          .copy
+            %h3 1. Pick a video.
+            %p Tell us what video you would like to create your quiz from. You can either provide a link to a video hosted on another site (like YouTube), or upload one from your computer.
+            %p Don't see anything out there that suits your needs? You can always record your own video!
+          .clr
+        .clr
+        .row.second
+          .img= image_tag "landing/quizzes/create_questions.png"
+          .copy
+            %h3 2. Embed questions.
+            %p Use our simple tools to embed questions anywhere throughout your video. 
+            %p You choose the question format, we support multiple choice, T/F, and fill-in-the-blank.
+          .clr
+        .clr
+        .row.third
+          .img= image_tag "static/teach/ss2-2.png"
+          .copy
+            %h3 3. Distribute and analyze.
+            %p Send your video quiz to students or friends via email, Facebook, or Twitter with a click. 
+            %p Our dashboard lets you review who has taken your quiz and how they scored.
+          .clr
+        .clr

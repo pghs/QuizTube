@@ -1,23 +1,22 @@
-.Header.clearfix
-	.clsLogo
-		%h1
-			%a{:href => "/"}
-				=image_tag 'quiztube-logo.jpg'
-	.clsMenu
-		%ul
-			%li
-				%a.active{:href => "/"} Home
-			%li
-				%a{:href => "#"} Top Rated
-			%li
-				%a{:href => "#"} Popular
-			-unless current_user
-				%li
-					%a{:href => "/users/sign_up"} Register
-			%li
-				%a{:href => "#"} Create a Quiz
-			-if current_user
-				%li
-					%a{:href => "/lessons"} My Quizzes
-				%li.user
-					%a{:href => "/users/edit"}= "Welcome, #{current_user.email}"
+#header
+  .shell
+    #head
+      .row-top
+        %h2#logo
+          %a.notext{:href=>"/"} Logo
+        .usernav
+          - unless current_user.nil?
+            %a.first.active{:href=>"/lessons"} My Lessons
+          - if current_user.nil?
+            %ul
+              %li
+                %a.first.active#sign_up{:href=>"/users/sign_up"} Sign up
+              %li
+                %a.active#sign_in{:href=>"/users/sign_in"} Login
+          - else
+            %ul
+              %li
+                %a.first{:href=>"/users/edit"} Account
+              %li
+                =link_to "Logout", destroy_user_session_path, :method => 'DELETE', :id => 'logout'
+        .cl

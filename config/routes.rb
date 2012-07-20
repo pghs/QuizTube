@@ -15,5 +15,5 @@ Quiztube::Application.routes.draw do
   resources :lessons
   resources :questions
 
-  root :to => "studyeggs#index"
+  root :to => "static#home"
 end

@@ -1,151 +1,615 @@
-#login {
-  text-align: center;
-  position: relative;
-  top: 100px;
-  background: white;
-  padding: 20px;
-  -moz-box-shadow: 2px 2px 2px 2px #ccc;
-  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
-  box-shadow: 6px 6px 15px 6px #ccc;    
-  
-  h2 {
-    color: #781A1A;
-    font-weight: bold;
+// Place all the styles related to the Static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the studyeggs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home {
+
+  #header {
+    border-bottom: 1px solid #ccc;
+    margin:0px;
+    padding:0;
+    .shell {
+      width:940px;
+      #head {
+        width:940px;
+        padding:0;
+        margin:0;
+        .row-top {
+          height:65px;
+          #logo {
+            width:199px;
+            height:44px;
+            left:0;
+            top:9px;
+
+            .notext {
+              background: url(logo44.png);
+              height:44px;
+            }
+          }
+          .usernav {
+            top:13px;
+            ul {
+              padding: 4px;
+               // padding:6px 10px !important;
+               a#sign_in {
+                 padding-left:8px;
+                 margin-left:-4px;
+               }
+            }
+          }
+        }
+      }
+    }
   }
+  background:url(home/bgthatch2.png) repeat-x 0 13px;
 
-  #login_fields {
-    padding: 5px;
-  }
+  #above_fold_container {
+    width:100%;
+    border-top: 2px solid #fefefe;
+    background:url(home/path2.png) no-repeat center -20px;
 
-  .login_field {
-    height: 30px;
-    width: 325px;
-    margin: 10px;
-    font-size: 24px;
-  }
+    &.ie {
+    }
 
-  #submit {
-    padding: 20px;
+ 
+    #above_fold {
+      width: 940px;
+      min-height:456px;
+      margin: 0 auto;
 
-    .input_button {
-      height: 40px;
-      width: 80px;
-      font-size: 24px;
+      #splash {
+        
+        .message {
+          width:300px;
+          margin-top:128px;
+          float:right;
+          height:300px;
+          color:#0282c9;
+
+          .large {
+            margin-top:-13px;
+            font-size:32px;
+            line-height:36px;
+            font-weight:bold;
+            text-shadow: 0px -1px 0px #fff;
+          }
+
+          .small {
+            margin-top:4px;
+            font-size:18px;
+            line-height:22px;
+            color:#0282c9;
+          }
+
+          .cta_demo {
+            font-size:18px;
+            font-weight:bold;
+            line-height:40px;
+            color:#555;
+            
+            margin:3px 0 0;
+            padding:0em .65em;
+            display:inline;
+            border-color:#eca91a;
+          }
+
+          .actions {
+            font-size:15px;
+            color:#999;
+            margin-left:4px;
+            // margin-top:-1px;
+            
+            a {
+              font-size:15px;
+              color:#888;
+              padding:0 2px;
+            }
+          }
+        }
+      }
     }
   }
 
-  #email {
+  #below_fold {
+    width: 860px; 
+    margin: -40px auto 0px;
+    padding:46px 46px 0;
+    background:url('home/faded-shadow2.png') no-repeat;
 
-  }
-  #password {
+    #cols {
+      div {
+        width: 245px;
+        float: left;
+        margin-right:62px;
 
+        h3 {
+          float:left;
+          clear:right;
+          margin:0;
+          padding:5px 10px;
+          color:#666;
+          font-weight:normal;
+          font-size:22px;
+          line-height:25px;
+        }
+
+        img {
+          float:left;
+          border:none;
+          outline:none;
+        }
+
+        p {
+          float:left;
+          clear:both;
+          color:#666;
+          font-size:15px;
+          line-height:20px;
+          position:relative;
+          // top:-20px;
+        }
+
+        &.one {
+          img {
+            height:35px;
+            width:27px;
+            background:url('home/headings.png') no-repeat;
+          }
+        }
+
+        &.two {
+          img {
+            height:35px;
+            width:29px;
+            background:url('home/headings.png') no-repeat -27px 0;
+          }
+        }
+
+        &.three {
+          margin-right:0px;
+          img {
+            height:35px;
+            width:45px;
+            background:url('home/headings.png') no-repeat -56px 0;
+          }
+        }
+      }
+    }
+
+    .dotted-rule {
+      margin-top:35px;
+      width:855px;
+      height:1px;
+      background:url('home/dotted-rule.png');
+    }
+
+    #rows {
+      #third-row {
+        color:#666;
+        margin-top:55px;
+        margin-bottom:0px;
+        // background-color:#e1dacd;
+        border-radius:3px;
+        font-size:22px;
+        line-height:40px;
+        text-align:center;
+
+        .cta_more {
+          font-size:16px;
+          font-weight:bold;
+          line-height:36px;
+          color:#555;
+          
+          margin:3px 0 0 15px;
+          padding:0em .65em;
+          display:inline;
+          border-color:#eca91a;
+        }
+      }
+    }
+
+    #scene {
+      margin-top:27px;
+
+      img {
+        position:relative;
+        left:-30px;
+        top:19px;
+      }
+    }
   }
 }
 
-.header_container {
-  height: 60px;
-  line-height:4em;
-  background-color: #F5F5F5;
-  position: relative;
-  text-align: center;
+.teach {
+
+  #header {
+    border-bottom: 1px solid #ccc;
+    margin:0px;
+    padding:0;
+    .shell {
+      width:940px;
+      #head {
+        width:940px;
+        padding:0;
+        margin:0;
+        .row-top {
+          height:65px;
+          #logo {
+            width:199px;
+            height:44px;
+            left:0;
+            top:9px;
+
+            .notext {
+              background: url(logo44.png);
+              height:44px;
+            }
+          }
+          .usernav {
+            top:13px;
+            ul {
+              padding: 4px;
+               // padding:6px 10px !important;
+               a#sign_in {
+                 padding-left:8px;
+                 margin-left:-4px;
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+  background:url(home/bgthatch2.png) repeat-x 0 -154px;
+
+  #above_fold_container {
+    width:100%;
+    border-top: 2px solid #fefefe;
+ 
+    #above_fold {
+      width: 940px;
+      height:284px;
+      overflow:hidden;
+      margin: 0 auto;
+
+      #splash {
+        
+        .message {
+          width:530px;
+          margin-top:50px;
+          margin-left:25px;
+          float:left;
+          height:150px;
+          color:#0282c9;
+
+          .large {
+            margin-top:-13px;
+            font-size:32px;
+            line-height:36px;
+            font-weight:bold;
+            text-shadow: 0px -1px 0px #fff;
+          }
+
+          .small {
+            margin-top:4px;
+            font-size:17px;
+            line-height:20px;
+            color:#0282c9;
+          }
+        }
+
+        .cta {
+          padding-top:20px;
+
+          form {
+            background:none;
+            padding:60px 25px 0 0;
+
+            h3 {
+              right: -10px;
+              position: relative;
+              color: #666;
+            }
+
+            #user_email {
+              float:left;
+              font-size:15px;
+              // font-weight:bold;
+              line-height:22px;
+              padding:4px;// 2px;
+              width:205px;
+              margin-top:9px;
+              background:#f9f9f9 !important;
+            }
+
+            button {
+              float:right;
+              font-size:18px;
+              font-weight:bold;
+              line-height:40px;
+              color:#555;
+
+              margin:3px 0 0;
+              padding:0em .65em;
+              display:inline;
+              border-color:#eca91a;
+
+              position: relative;
+              right: -15px;  
+              width: 160px;
+              top: -41px;            
+            }
+          }
+        }
+
+        #scene {
+          img {
+            float:right;
+            position:relative;
+            top:-75px;
+            right:-83px;
+          }
+        }
+      }
+    }
+  }
+
+  #below_fold {
+    width: 892px; 
+    margin: -40px auto 0px;
+    padding: 27px 30px 0;
+    background:url('home/faded-shadow2.png') no-repeat;
+
+    #rows {
+      .row {
+        margin-bottom:40px;
+
+        .img {
+          padding:10px;
+          border:1px solid #ddd;// #e6e6e6;
+          background:#e6e6e6;//#f2f2f2;
+          width:487px;
+          float:left;
+
+          img {
+            width:487px;
+          }
+        }
+
+        .copy {
+          float:right;
+          width:340px;
+          color:#666;
+
+          h3 {
+            margin:0;
+            padding:20px 0 0 0;
+            // color:#666;
+            font-weight:normal;
+            font-size:22px;
+            line-height:25px;
+          }
+
+          p {
+            font-size:15px;
+            line-height:18px;
+            position:relative;
+            // top:-20px;
+          }
+        }
+      }
+    }
+
+    #fourth-row {
+      position:relative;
+
+      .cta_demo {
+        position:absolute;
+
+        font-weight:normal;
+        font-size:30px;
+        line-height:1.62em;
+        color:#4d4d4d;
+        
+        margin:14px 0 0;
+        padding:0em .65em;
+        display:inline;
+        border-color:#eca91a;
+
+        right: 148px;
+      }
+    }
+  }
+}
+
+.cols { padding: 40px 0; }
+.cols .col { width: 180px; padding: 0 8px; float: left; display: inline; }
+.col .col-head h4 { font-size: 18px; text-align: center; }
+.col .col-head p { padding: 10px 0 0 0; font-size: 14px; text-align: center; }
+
+#content {
+
+  p {padding: .62em 0;}
   
-  a {
-    color: blue;
-    text-decoration: none;
+  ul {
+/*    list-style-type: none;*/
+    padding:1.32em 0;
+    
+    li {
+      text-decoration:none;
+    }
   }
-
-  .back_link {
-    display: inline;
-    position: absolute;
-    left: 50px;
-    top: 3px;
+  
+  #team, #about, #story, #privacy, #tos {
+    h1 {
+      margin:.62em 0;
+      line-height: 1.15em;
+      font-size: 28px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: .32em;
+    }
   }
+  
+  #team {
+    width:62%;
+    margin: 27px auto;
+    
+    img {
+      margin:12px 12px 12px 0px;
+    }
+    
+    ul {
+      padding-left:0px;
+    }
+    
+    li {
+      list-style-type: none;
+      background: url(../assets/home/tiny-egg.png) no-repeat;
+      background-position:3px 3px;
+      padding: 2px 0 0px 28px;
+    }
+  }
+  
+  #about {
+    width:62%;
+    margin: 27px auto;
+    
+    img {
+      max-width:180px;
+    }
+  }
+  
+  #story {
+    width:62%;
+    margin: 27px auto;
+    
+    img {
+      max-width:180px;
+    }
+  }
+}
 
-  .title {
-    font-size: 30px;
-    font-weight: bold;
-    color: #781A1A;
+.cta {
+  form {
     position: relative;
+    top: -5px;
+  }
+  
+  .pricing {
+    color: #0282c9;
+    font-weight: bold;
+    position: relative;
+    right: -45px;
+    top: 30px;
     display: inline;
-  }    
-
-  .login {
-    display: inline;
-    position: absolute;
-    right: 0px;    
+    font-size: 32px;
   }
 }
 
-.home {
-  width: 99%;
-  height: 650px;
-  text-align: center; 
+#worksheets {
+  #how_arrow {
+    position: relative;
+    img {
+      position: absolute;
+      top: 190px;
+      left: 117px;
+    }    
+  }  
+
+  .pricing {
+    color: #0282c9;
+    font-weight: bold;
+    position: relative;
+    right: -17px;
+    top: 30px;
+    display: inline;
+    font-size: 24px;
+  }  
 }
 
-.home_image {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+#ebooks {
+  #how_arrow {
+    position: relative;
+    img {
+      position: absolute;
+      top: 190px;
+      left: 117px;
+    }    
+  }
+
+  .pricing {
+    right: -74px;
+  }
 }
 
-.home_box {
-  width: 75%;
-  position: relative;
-  height: 275px; 
-  top: 100px;
-  background-color:rgba(191,191,191,0.7);
-  margin: auto;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -khtml-border-radius: 20px;
-  border-radius: 20px;  
-  -moz-box-shadow: 2px 2px 2px 2px #ccc;
-  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
-  box-shadow: 3px 3px 15px 1px #ccc;  
+#quiz {
+  .notext {
+    background: url('landing/quizzes/quiz_logo.png') !important;
+    height:84px;
+  }
+
+  #try_arrow {
+    position: relative;
+    img {
+      position: absolute;
+      top: 230px;
+      left: 112px;
+    }
+  }
+
+  #how_arrow {
+    position: relative;
+    img {
+      position: absolute;
+      top: -38px;
+      left: 112px;
+    }
+  }
+
+  #below_fold_container {
+    border-top: 1px solid #CCC;    
+    background-image:url(thatch.png);
+    padding-bottom: 26px;
+    margin-bottom: -20px;    
+
+    #below_fold {
+      background: white !important;
+      margin: -30px auto 0px;
+      padding-bottom: 1px;
+      box-shadow: 0 1px .62em #AAA;
+      -moz-box-shadow: 0 1px .62em #AAA;
+      -khtml-box-shadow: 0 1px .62em #AAA;
+      -webkit-box-shadow: 0 1px .62em #AAA;
+      -o-box-shadow: 0 1px .62em #AAA;      
+    }
+  }
+
+  #scene {
+    img {
+      top:-35px !important;
+      right:-96px !important;
+    }
+  }
+
+  #demo {
+    border-top: 1px solid #CCC;    
+    height: 575px;
+    width: 100%;
+    background: white !important;
+
+    iframe {
+      margin-top: 50px;
+      border: 0;
+      width: 100%;
+      height: 500px;
+    }
+  }  
 }
 
-.home_text {
-  position: relative;
-  top: 25px;
-  font-size: 36px;
-  font-weight: bold;
-  line-height:120%;
-  color: white;
-  display: inline;  
-}
 
-
-
-.welcome {
-  font-weight: bold;
-  font-size: 12px;
-  display: inline;
-}
-
-.edit_link {
-  color: blue;
-  text-decoration: none;
-}
-
-.dotted_line {
-  border-top: 3px dotted #A8A8A8;
-  height: 1px;
-  width: 450px;
-  float: left;
-}
-
-
-
-.shadow {
-  -moz-box-shadow: 2px 2px 2px 2px #ccc;
-  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
-  box-shadow: 3px 3px 15px 1px #ccc;
-}
-
-.fb_button {
-}
-
-fieldset {
-  max-width: 100%;
-}
