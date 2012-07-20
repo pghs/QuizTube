@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @question.question %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%= @question.topic %>
+</p>
+
+<p>
+  <b>Correct answer:</b>
+  <%= @question.correct_answer %>
+</p>
+
+<p>
+  <b>Incorrect answer1:</b>
+  <%= @question.incorrect_answer1 %>
+</p>
+
+<p>
+  <b>Incorrect answer2:</b>
+  <%= @question.incorrect_answer2 %>
+</p>
+
+<p>
+  <b>Incorrect answer3:</b>
+  <%= @question.incorrect_answer3 %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @question.user_id %>
+</p>
+
+<p>
+  <b>Chapter:</b>
+  <%= @question.chapter_id %>
+</p>
+
+<p>
+  <b>Score:</b>
+  <%= @question.score %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

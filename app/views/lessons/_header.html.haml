@@ -1,0 +1,8 @@
+.header{:id => "header_" + question.id.to_s, :question_id => question.id.to_s}
+	.header_text_container
+		%p.header_text= "#{i+1}. #{question.question}"
+	.controls	
+		.delete_question_container
+			.delete_question
+				= image_tag "close.gif"
+

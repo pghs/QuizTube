@@ -1,0 +1,34 @@
+<div style="width: 700px; margin:0 auto;">
+  <h1>Which of these two questions is more beneficial to you as a student?</h1>
+  <div id="<%= @question1.id%>" style="width:325px; float:left;">
+    <strong><%= @question1.question %></strong></br>
+    
+    <ul>
+      <li><%= @question1.correct_answer %></li>
+      <li><%= @question1.incorrect_answer_1 %></li>
+      <li><%= @question1.incorrect_answer_2 %></li>
+      <li><%= @question1.incorrect_answer_3 %></li>
+    </ul>
+    <!--<%= @question1.score %>--><br />
+    <%= link_to "This question is better", "questions/update_question_scores/#{@question1.id}/#{@question2.id}/0" %>
+  </div>
+  
+  <div id="<%= @question2.id%>" style="width:325px; float:right;">
+    <strong><%= @question2.question %></strong></br>
+    
+    <ul>
+      <li><%= @question2.correct_answer %></li>
+      <li><%= @question2.incorrect_answer_1 %></li>
+      <li><%= @question2.incorrect_answer_2 %></li>
+      <li><%= @question2.incorrect_answer_3 %></li>
+    </ul>
+    
+    <!--<%= @question2.score %>--><br />
+    <%= link_to "This question is better", "questions/update_question_scores/#{@question2.id}/#{@question1.id}/0" %>
+  </div>
+  
+  <div style="clear: both; margin: 15px auto 0 auto; width:100px;">
+    <%= link_to "It's a tie", "questions/update_question_scores/#{@question1.id}/#{@question2.id}/1" %>
+  </div>
+
+</div>

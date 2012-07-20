@@ -1,0 +1,56 @@
+- placeholder = "http://www.mediatehawaii.org/wp-content/uploads/placeholder.jpg"
+%div{:id => "templates"}
+  %div{:id => "activity_group"}   
+    .header{:id => "header_", :question_id => -1}
+      .header_text_container
+        %p.header_text
+      .controls 
+        .delete_question_container
+          .delete_question
+            = image_tag "close.gif"
+    %br  
+    .activity_content
+      .activity_left_column
+        .question_group
+          = text_area nil, nil, :placeholder => "Question", :class => "question_area"
+        .answer_group
+          .add_answer Add Answer  
+          = text_field nil, nil, :placeholder => "Topics", :class => "keyword_field"
+      .activity_right_column  
+        #answer_resource_1{:class => "answer_media_box"}
+          %p.resource_label < Add a video clip >
+  %div{:id => "correct_answer"}
+    .indicator
+      = image_tag("correct.png", :class => "indicator_mark correct")
+    .answer_space
+      = text_field nil, nil, :id => "answer_field", :placeholder => "Answer", :class => "answer_field"
+  %div{:id => "incorrect_answer"}
+    .indicator
+      = image_tag("incorrect.png", :class => "indicator_mark incorrect")
+    .answer_space
+      = text_field nil, nil, :id => "answer_field", :placeholder => "Answer", :class => "answer_field" 
+    / = link_to "X", nil, :id => "delete_answer_", :tabindex => -1, :class => "delete_answer"
+  #video_search_result_template{:class => "video_search_result"}
+    = label nil, "", :class => "video_search_result_label" 
+  %div{:id => "header"}
+    = label nil, "", :class => "header_text"  
+  #image_container_template
+    = image_tag placeholder, :id => "image_preview"
+#preview_modal{:class => "ui-widget ui-helper-hidden"}
+  %iframe{:id => "preview", :style => "width: 99%; height: 99%;"}
+#media-dialog{:class => "ui-widget ui-helper-hidden"}
+  #video_area
+    #video_preview
+      %iframe{:id => "video_preview_frame", :width => 400, :height => 325}      
+      #video_time_container
+        Start
+        %input{:id => "video_start_input_minute", :name => "name", :type => "text", :placeholder => "min", :class => "time_input"}
+        \:
+        %input{:id => "video_start_input_second", :name => "name", :type => "text", :placeholder => "sec", :class => "time_input"}
+        End
+        %input{:id => "video_end_input_minute", :name => "name", :type => "text", :placeholder => "min", :class => "time_input"}
+        \:
+        %input{:id => "video_end_input_second", :name => "name", :type => "text", :placeholder => "sec", :class => "time_input"}
+                                
+#dialog-confirm{:class => "ui-widget ui-helper-hidden", :title => "Delete this question?"}
+  %p This action cannot be undone. Are you sure?

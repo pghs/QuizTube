@@ -1,0 +1,30 @@
+= hidden_field_tag :media_url, @lesson.media_url
+
+#video_container{:style => "top: 0px; float:left;"}
+	#video
+	#video_control.play
+
+#progress_bar_container
+	#progress_bar
+		#q-markers
+		.elapsed
+
+#new_question{:style => 'float:right; width: 375px;'}
+	%span Start Clip
+	%span#start_time 0
+	%a{:href=>'#'} Lock In
+	%br
+	%span End Clip
+	%span#end_time 0
+	%a{:href=>'#'} Lock In
+	%h2 Question
+	%textarea{:style => 'width:350px; height: 100px;'}
+#activities
+	- @lesson.questions.each_with_index do |question, i|
+		.header{:id => "header_" + question.id.to_s, :question_id => question.id.to_s}
+			.header_text_container
+				%p.header_text= "#{i+1}. #{question.question}"
+			.controls	
+				.delete_question_container
+					.delete_question
+						= image_tag "close.gif"

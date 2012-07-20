@@ -1,0 +1,12 @@
+- blank_placeholder = "http://www.mediatehawaii.org/wp-content/uploads/placeholder.jpg"
+- article_placeholder = "http://www.elitetranslingo.com/css/css/images/doc.png"
+- video_placeholder = "/assets/video_placeholder.png"
+
+#answer_resource_1{:class => "answer_media_box"}
+     - if question.clip_start_time
+          - url = @lesson.media_url
+          - preview, url = video_placeholder, "#{{}}url}&t=0m#{question.clip_start_time}s"
+          = image_tag "video_placeholder.png", :id => "media_preview_#{answer_resource.id}", :class => "media_preview", :resource_id => answer_resource.id, :resource_url => answer_resource.url, :resource_type => answer_resource.media_type
+          = link_to "Remove", nil, :id => "delete_resource_#{answer_resource.id}", :class => "remove_resource"
+     - else 
+          %p.resource_label < Add a video clip >

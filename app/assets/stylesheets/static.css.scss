@@ -1,0 +1,151 @@
+#login {
+  text-align: center;
+  position: relative;
+  top: 100px;
+  background: white;
+  padding: 20px;
+  -moz-box-shadow: 2px 2px 2px 2px #ccc;
+  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
+  box-shadow: 6px 6px 15px 6px #ccc;    
+  
+  h2 {
+    color: #781A1A;
+    font-weight: bold;
+  }
+
+  #login_fields {
+    padding: 5px;
+  }
+
+  .login_field {
+    height: 30px;
+    width: 325px;
+    margin: 10px;
+    font-size: 24px;
+  }
+
+  #submit {
+    padding: 20px;
+
+    .input_button {
+      height: 40px;
+      width: 80px;
+      font-size: 24px;
+    }
+  }
+
+  #email {
+
+  }
+  #password {
+
+  }
+}
+
+.header_container {
+  height: 60px;
+  line-height:4em;
+  background-color: #F5F5F5;
+  position: relative;
+  text-align: center;
+  
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  .back_link {
+    display: inline;
+    position: absolute;
+    left: 50px;
+    top: 3px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #781A1A;
+    position: relative;
+    display: inline;
+  }    
+
+  .login {
+    display: inline;
+    position: absolute;
+    right: 0px;    
+  }
+}
+
+.home {
+  width: 99%;
+  height: 650px;
+  text-align: center; 
+}
+
+.home_image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home_box {
+  width: 75%;
+  position: relative;
+  height: 275px; 
+  top: 100px;
+  background-color:rgba(191,191,191,0.7);
+  margin: auto;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;  
+  -moz-box-shadow: 2px 2px 2px 2px #ccc;
+  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
+  box-shadow: 3px 3px 15px 1px #ccc;  
+}
+
+.home_text {
+  position: relative;
+  top: 25px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height:120%;
+  color: white;
+  display: inline;  
+}
+
+
+
+.welcome {
+  font-weight: bold;
+  font-size: 12px;
+  display: inline;
+}
+
+.edit_link {
+  color: blue;
+  text-decoration: none;
+}
+
+.dotted_line {
+  border-top: 3px dotted #A8A8A8;
+  height: 1px;
+  width: 450px;
+  float: left;
+}
+
+
+
+.shadow {
+  -moz-box-shadow: 2px 2px 2px 2px #ccc;
+  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
+  box-shadow: 3px 3px 15px 1px #ccc;
+}
+
+.fb_button {
+}
+
+fieldset {
+  max-width: 100%;
+}

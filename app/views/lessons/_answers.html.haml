@@ -1,0 +1,23 @@
+.question_group
+     = text_area nil, nil, :question_id => question.id, :value => question.question, :placeholder => "Question", :class => "question_area"
+     %br
+.answer_group
+     - correct_answer = question.answers.all(:conditions => {:correct => true}).first
+     - if correct_answer
+          .answer
+               .indicator
+                    = image_tag("correct.png", :class => "indicator_mark correct")
+               .answer_space
+                    = text_field nil, nil, :answer_id => correct_answer.id, :question_id => question.id, :value => correct_answer.answer, :placeholder => "Answer", :correct => 1, :class => "answer_field"    
+                    / = link_to "X", nil, :id => "delete_answer_#{correct_answer.id}"
+     - incorrect_answers = question.answers.all(:conditions => {:correct => false})
+     - if incorrect_answers
+          - incorrect_answers.each do |incorrect_answer|
+               .answer
+                    .indicator
+                         = image_tag("incorrect.png", :class => "indicator_mark incorrect")
+                    .answer_space
+                         = text_field nil, nil, :answer_id => incorrect_answer.id, :question_id => question.id, :value => incorrect_answer.answer, :placeholder => "Answer", :correct => 0, :class => "answer_field"
+                    = link_to "X", nil, :id => "delete_answer_#{incorrect_answer.id}", :tabindex => -1, :class => "delete_answer"
+     .add_answer Add Answer   
+     = text_field nil, nil, :placeholder => "Topics", :class => "keyword_field", :id => "topic_field_#{question.id}"

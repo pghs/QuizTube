@@ -1,0 +1,17 @@
+
+= render "layouts/header"
+
+.content_container
+	.left_column
+		.column_content
+			= form_for @lesson do |f|
+				.field
+					%td= f.label :name, "Lesson name", :class => "form_label"
+					%td= f.text_field :name, :class => "form_field"
+				.field
+					%td= f.label :media_url, "YouTube Link URL", :class => "form_label"
+					%td= f.text_field :media_url, :class => "form_field"
+				%br/
+
+				.actions
+					%td= f.submit

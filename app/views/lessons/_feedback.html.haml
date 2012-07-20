@@ -1,0 +1,37 @@
+.feedback_body
+	.feedback_select
+		.question_feedback
+			%h3 Question:
+			.feedback_item
+				= check_box "question_#{question.id}_feedback", "long", :class => "long"
+				= label nil, "Too long", :for => "question_#{question.id}_feedback_long"
+			.feedback_item
+				= check_box "question_#{question.id}_feedback", "hard", :class => "hard"
+				= label nil, "Too hard", :for => "question_#{question.id}_feedback_hard"
+			.feedback_item
+				= check_box "question_#{question.id}_feedback", "easy", :class => "easy"
+				= label nil, "Too easy", :for => "question_#{question.id}_feedback_easy"
+			.feedback_item
+				= check_box "question_#{question.id}_feedback", "check_correct", :class => "check_correct"
+				= label nil, "Incorrect", :for => "question_#{question.id}_feedback_check_correct"
+		/ .topics_feedback
+		/ 	%h3 Tags:
+		/ 	.feedback_item
+		/ 		= check_box "question_#{question.id}_feedback", "missing", :class => "missing"
+		/ 		= label nil, "Missing important", :for => "question_#{question.id}_feedback_missing"
+		/ 	.feedback_item
+		/ 		= check_box "question_#{question.id}_feedback", "accurate", :class => "accurate"
+		/ 		= label nil, "Innapropriate", :for => "question_#{question.id}_feedback_accurate"
+		.media_feedback
+			%h3 Video:
+			.feedback_item
+				= check_box "question_#{question.id}_feedback", "timing", :class => "timing"
+				= label nil, "Timing is off", :for => "question_#{question.id}_feedback_timing"
+			.feedback_item
+				= check_box "question_#{question.id}_feedback", "relevant", :class => "relevant"
+				= label nil, "Doesn't address question", :for => "question_#{question.id}_feedback_relevant"
+
+	.feedback_comment
+		= text_area nil, nil, :class => "comment", :placeholder => "Comment"
+		= button_to "Save", nil, :class => "submit_feedback"
+		= button_to "Remove Flag", nil, :class => "clear_feedback"

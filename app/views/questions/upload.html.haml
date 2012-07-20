@@ -1,0 +1,28 @@
+%h1= "Select an examview XML file to upload."
+
+= form_for :dump, :url=>{:controller=>"questions", :action=>"examview_parser"}, :html => { :multipart => true } do |f|
+  %table
+    %tr
+      %td
+        %label{:for => "dump_file1"}
+          Select a file :
+      %td
+        = f.file_field :file1
+
+    / %tr
+    /   %td
+    /     %label{:for => "dump_file1"}
+    /       Select questionDB file :
+    /   %td
+    /     = f.file_field :file2
+                
+    %tr
+      %td
+        %label
+          Add to book:
+      %td
+        = collection_select("book", "id", Book.all(), :id, :name)
+        / # = collection_select("chapter", "id", Chapter.all(), :id, :name)
+    %tr
+      %td{:colspan => "2"}
+        = submit_tag 'Upload'

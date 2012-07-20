@@ -1,0 +1,23 @@
+.Header.clearfix
+	.clsLogo
+		%h1
+			%a{:href => "/"}
+				=image_tag 'quiztube-logo.jpg'
+	.clsMenu
+		%ul
+			%li
+				%a.active{:href => "/"} Home
+			%li
+				%a{:href => "#"} Top Rated
+			%li
+				%a{:href => "#"} Popular
+			-unless current_user
+				%li
+					%a{:href => "/users/sign_up"} Register
+			%li
+				%a{:href => "#"} Create a Quiz
+			-if current_user
+				%li
+					%a{:href => "/lessons"} My Quizzes
+				%li.user
+					%a{:href => "/users/edit"}= "Welcome, #{current_user.email}"

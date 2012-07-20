@@ -1,0 +1,4 @@
+%ul
+	-@chapters.each do |ch|
+		%li
+			%a{:href=>"http://localhost:3001/export_lesson_questions/#{ch.id}"}= ch.name
