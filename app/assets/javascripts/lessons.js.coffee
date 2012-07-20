@@ -131,19 +131,19 @@ class Video
 			@current_start_marker_time = current_time - 20
 			start_pos = ((current_time-20)/duration)*100
 		start_marker = "<div class='q-marker-spacer' style='margin-left:#{start_pos}%;'>
-		              <div class='q-marker wrong start'>
-		                <div class='q'>
-		                  <img class='small' alt='Trans' src='/assets/trans.png'id='start_marker'/>
-		            </div></div></div>"
+			<div class='q-marker wrong start'>
+			<div class='q'>
+			<img class='small' alt='Trans' src='/assets/trans.png'id='start_marker'/>
+			</div></div></div>"
 		end_pos = 2
 		if ((current_time/duration)*100) > 2
 			end_pos = (current_time/duration)*100
 		@current_end_marker_time = current_time
 		end_marker = "<div class='q-marker-spacer' style='margin-left:#{end_pos}%;'>
-				            <div class='q-marker wrong end'>
-				              <div class='q'>
-				                <img class='small' alt='Trans' src='/assets/trans.png'id='end_marker'/>
-				          </div></div></div>"
+			<div class='q-marker wrong end'>
+			<div class='q'>
+			<img class='small' alt='Trans' src='/assets/trans.png'id='end_marker'/>
+			</div></div></div>"
 		$('#q-markers').append(start_marker)
 		$('#q-markers').append(end_marker)
 
@@ -152,11 +152,12 @@ class Video
 			containment: '#progress_bar',
 			handle : '.small',
 			stop: (event, ui)->
-			  video.playPreviewClip(ui)
-			  video.setMarkerBoundaries(ui)
-				setTimeout((-> 
-					if window.quiz.current_question then window.quiz.current_question.save("clip_start_time": @current_start_marker_time, "clip_end_time": @current_end_marker_time) else window.quiz.questions.push new Question "clip_start_time": @current_start_marker_time, "clip_end_time": @current_end_marker_time),
-					1000)			  
+				video.playPreviewClip(ui)
+				video.setMarkerBoundaries(ui)
+				console.log @current_start_marker_time
+				# setTimeout((-> 
+				# 	if window.quiz.current_question then window.quiz.current_question.save("clip_start_time": @current_start_marker_time, "clip_end_time": @current_end_marker_time) else window.quiz.questions.push new Question "clip_start_time": @current_start_marker_time, "clip_end_time": @current_end_marker_time),
+				# 	1000)			  
 			});
 		setInterval(=>
 		  @setMarkerBoundaries(null)
@@ -198,8 +199,6 @@ class Video
 		end_y2 = st_y1
 		$(".q-marker.start").draggable("option", "containment", [st_x1, st_y1, st_x2-5, st_y2])
 		$(".q-marker.end").draggable("option", "containment", [end_x1+5, end_y1, end_x2, end_y2])
->>>>>>> ca78db4f61e396a60207592d6d277d8b0a8dd0de
-
 
 $ ->
 	window.run = ->
