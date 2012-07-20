@@ -6,6 +6,7 @@ Quiztube::Application.routes.draw do
   match "lessons/update_status" => "lessons#update_status"
   match "lessons/publish" => "lessons#publish"
   match "lessons/add" => "lessons#add"
+  match "lessons/testvideo" => 'lessons#video' 
 
   #QUESTIONS
   match "questions/save_question" => "questions#save_question", :as => :save_question_path

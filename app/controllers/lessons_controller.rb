@@ -139,5 +139,8 @@ class LessonsController < ApplicationController
     str.gsub!(" .", ".")
     str.gsub!("\n","")
     return str
-  end  
+  end
+
+  def video
+  end
 end
