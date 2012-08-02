@@ -17,6 +17,10 @@ class LessonsController < ApplicationController
     @lesson = Lesson.find(params[:id])
   end
 
+  def questions
+    render :json => Lesson.find(params[:id]).questions
+  end
+
   # GET /lessons/new
   # GET /lessons/new.xml
   def new

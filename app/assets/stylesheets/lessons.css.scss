@@ -196,19 +196,62 @@
   #question_area {
     margin-top: 30px;
     height:100px;
+    width:710px;
+    margin: 30px auto;
     text-align: center;
 
     #question_container {
-      /*background: gray;*/
-      height: 500px;
+      background: #F0F0F0;
+      height: 295px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;    
+      margin-top: 45px;  
       
-      #add_question {
+      #question {
+        width: 40%;
+        height: 260px;
+        float: left;
+
+        #question_input {
+          float: none;
+          height: 241px;
+          margin-top: 12px;
+          background: white;
+        }
+      }
+
+      #answers {
+        width: 60%;
+        float: left;
+        padding-top: 5px;
+
+        .answer {
+          float: right;
+          margin-right: 15px; 
+          
+          .answer_field {
+            background: white;
+          }
+
+          .indicator {
+            height: 0px;
+          }         
+        }
+      }
+
+      #finish {
+        float: right;
+        margin-right: 15px;
+      }
+
+/*      #add_question {
         display: block;
       }
 
       #question {
         margin: auto;
-      }
+      }*/
     }
   }
 }

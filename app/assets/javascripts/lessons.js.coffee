@@ -5,12 +5,16 @@ class Quiz
 	current_question: null
 	constructor: ->
 		@id = $("#lesson_id").val()
+		@load_questions()
 		# $(".question_marker").on "click", => @load_question()
 		$("#add_question a").on "click", => @add_question()
 		$("#finish").on "click", => @complete_question()
-		$("#question_input, .answer_field").on "keydown", (e) => @show_next_input($(e.target).attr "id")
+		# $("#question_input, .answer_field").on "keydown", (e) => @show_next_input($(e.target).attr "id")
 		$("#question_input").on "change", (e) => if @current_question then @current_question.save("question":$(e.target).val()) else @questions.push new Question "question":$(e.target).val()
 		$(".answer_field").on "change", (e) => @current_question.save_answer($(e.target))
+	load_questions: =>
+		$.getJSON "/lessons/#{@id}/questions", (data) => 
+			console.log data
 	add_question: => 
 		$("#add_question").hide()
 		$("#question_container").fadeIn()
@@ -18,7 +22,7 @@ class Quiz
 		@current_question = null
 	complete_question: =>
 		$("#add_question").fadeIn()
-		$("#question_container, .answer").hide()	
+		$("#question_container").hide()	
 		@clear_fields()
 	clear_fields: => 
 		$("#question_input, .answer_field").val("")
